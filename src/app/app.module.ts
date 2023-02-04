@@ -12,9 +12,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { EditComponent } from './pages/edit/edit.component';
 import { IndexComponent } from './pages/index/index.component';
+import { AddComponent } from './pages/add/add.component';
 
 @NgModule({
-  declarations: [AppComponent, EditComponent, IndexComponent],
+  declarations: [AppComponent, EditComponent, IndexComponent, AddComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
