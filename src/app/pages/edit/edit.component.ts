@@ -10,9 +10,9 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class EditComponent implements OnInit {
   editForm = this.formBuilder.group({
-    quantity: undefined,
-    premiumPrice: undefined,
-    pertamaxPrice: undefined,
+    quantity: 0,
+    premiumPrice: 0,
+    pertamaxPrice: 0,
   });
   produtcId = 0;
   constructor(
