@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'environment';
 
 export interface IProduct {
   id: number;
@@ -13,8 +14,8 @@ export interface IAddProduct {
   competitorPrice: number;
 }
 
-// const BASE_URL = 'https://frozen-lowlands-87948.herokuapp.com';
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = environment.gatewayUrl;
+// const BASE_URL = 'http://localhost:8080';
 
 @Injectable({
   providedIn: 'root',
