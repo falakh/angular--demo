@@ -13,7 +13,8 @@ export interface IAddProduct {
   competitorPrice: number;
 }
 
-const BASE_URL = 'https://frozen-lowlands-87948.herokuapp.com';
+// const BASE_URL = 'https://frozen-lowlands-87948.herokuapp.com';
+const BASE_URL = 'http://localhost:8080';
 
 @Injectable({
   providedIn: 'root',
@@ -41,5 +42,15 @@ export class ProductService {
   }
   editData(id: number, data: Partial<IAddProduct>) {
     return this.http.put<IProduct>(`${BASE_URL}/product/${id}`, data);
+  }
+
+  generate(premiumPrice: number, pertamaxprice: number) {
+    for (let index = 1; index < 20; index++) {
+      this.addData({
+        competitorPrice: pertamaxprice * index,
+        price: premiumPrice * index,
+        quantity: index,
+      }).subscribe();
+    }
   }
 }

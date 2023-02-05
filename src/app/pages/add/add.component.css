@@ -1,0 +1,10 @@
+.form-holder {
+  @apply flex flex-row items-baseline space-x-2;
+}
+
+.form-holder input {
+  @apply p-2 border-b border-black w-full focus:border space-x-2;
+}
+button {
+  @apply w-full bg-blue-400 text-white rounded-lg p-2;
+}

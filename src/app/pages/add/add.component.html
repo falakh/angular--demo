@@ -1,31 +1,36 @@
-<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
-  <div>
-      <label for="quantity_form">Quantity</label><br />
-    <input
-      id="quantity_form"
-      type="number"
-      inputmode="numeric"
-      formControlName="quantity"
-    />
-  </div>
-  <div>
-     <label for="price">Premium</label><br />
-    <input
-      id="price"
-      type="number"
-      inputmode="numeric"
-      formControlName="premiumPrice"
-    />
-  </div>
-  <div>
-      <label for="pertamaxPrice">Pertamax</label><br />
-    <input
-      id="pertamaxPrice"
-      type="number"
-      inputmode="numeric"
-      formControlName="pertamaxPrice"
-    />
-  </div>
+<div class="mx-auto w-[500px]">
+  <form class="space-y-4" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-holder">
+        <label for="quantity_form">Quantity</label><br />
+      <input
+        id="quantity_form"
+        required
+        type="number"
+        inputmode="numeric"
+        formControlName="quantity"
+      />
+    </div>
+    <div class="form-holder">
+       <label for="price">Premium</label><br />
+      <input
+        id="price"
+        required
+        type="number"
+        inputmode="numeric"
+        formControlName="premiumPrice"
+      />
+    </div>
+    <div class="form-holder">
+       <label for="pertamaxPrice">Pertamax</label><br />
+      <input
+        id="pertamaxPrice"
+        type="number"
+        required
+        inputmode="numeric"
+        formControlName="pertamaxPrice"
+      />
+    </div>
 
-  <button class="button" type="submit" onclick="onsubmit">Save</button>
-</form>
+    <button class="button" type="submit">Save</button>
+  </form>
+</div>

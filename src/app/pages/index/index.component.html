@@ -1,11 +1,3 @@
-<a
-  mat-raised-button
-  href="/add"
-  [disabled]="!dataSource.length"
-  class="demo-button"
->
-  Add
-</a>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
   <ng-container
     *ngFor="let column of columns"

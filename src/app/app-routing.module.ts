@@ -10,12 +10,12 @@ const routes: Routes = [
     component: IndexComponent,
   },
   {
-    path: 'edit/:id',
-    component: EditComponent,
-  },
-  {
     path: 'add',
     component: AddComponent,
+  },
+  {
+    path: 'edit/:id',
+    component: EditComponent,
   },
 ];
 

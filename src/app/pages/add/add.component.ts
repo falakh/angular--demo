@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormControl } from '@angular/forms';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -10,15 +9,19 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class AddComponent {
   editForm = this.formBuilder.group({
-    quantity: 0,
-    premiumPrice: 0,
-    pertamaxPrice: 0,
+    quantity: new FormControl(0, {
+      nonNullable: true,
+    }),
+    premiumPrice: new FormControl(0, {
+      nonNullable: true,
+    }),
+    pertamaxPrice: new FormControl(0, {
+      nonNullable: true,
+    }),
   });
-  produtcId = 0;
   constructor(
     private formBuilder: FormBuilder,
-    private product: ProductService,
-    private location: Location
+    private product: ProductService
   ) {}
 
   onSubmit(): void {
@@ -30,7 +33,8 @@ export class AddComponent {
         quantity: this.editForm.value.quantity ?? 0,
       })
       .subscribe(() => {
-        this.location.replace('/');
+        window.location.replace('/');
+        alert('Success');
       });
   }
 }

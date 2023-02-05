@@ -18,9 +18,9 @@ export class IndexComponent {
       withDeleteButton: true,
     },
     {
-      columnDef: 'price',
-      header: 'Price',
-      cell: (element: IProduct) => `${element.price}`,
+      columnDef: 'quantity',
+      header: 'Quantity',
+      cell: (element: IProduct) => `${element.quantity}`,
     },
     {
       columnDef: 'Premium',
