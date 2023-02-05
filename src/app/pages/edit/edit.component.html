@@ -1,5 +1,9 @@
-<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
-  <div>
+<form
+  [formGroup]="editForm"
+  class="mx-auto w-[500px] space-y-4"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="form-holder">
       <label for="quantity_form">Quantity</label><br />
     <input
       id="quantity_form"
@@ -8,7 +12,7 @@
       formControlName="quantity"
     />
   </div>
-  <div>
+  <div class="form-holder">
      <label for="price">Premium</label><br />
     <input
       id="price"
@@ -17,7 +21,7 @@
       formControlName="premiumPrice"
     />
   </div>
-  <div>
+  <div class="form-holder">
       <label for="pertamaxPrice">Pertamax</label><br />
     <input
       id="pertamaxPrice"
